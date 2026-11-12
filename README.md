@@ -2,6 +2,8 @@
 
 An open Agent Skill for developing Minecraft mods through natural language without losing sight of the actual repository.
 
+Project site: <https://moonoo-mw.github.io/Auto-Mod-Minecraft/>
+
 Auto-Mod-Minecraft teaches a compatible coding agent to inspect the project first, identify the exact Minecraft/loader/toolchain combination, reuse the project's architecture, implement the full gameplay and resource chain, and report verification honestly. It is a development workflow, not a collection of copy-paste mod classes or a Minecraft tutorial.
 
 ## Why this exists

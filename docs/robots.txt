@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://moonoo-mw.github.io/Auto-Mod-Minecraft/sitemap.xml

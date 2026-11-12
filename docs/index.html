@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auto-Mod-Minecraft — Minecraft Mod Development Agent Skill</title>
+  <meta name="description" content="Auto-Mod-Minecraft is an open Agent Skill for AI-assisted Minecraft mod development across Forge, NeoForge, and Fabric: project discovery, implementation, resources, UI, networking, and verification.">
+  <meta name="keywords" content="Auto-Mod-Minecraft, Minecraft mod development, Minecraft modding, Agent Skill, AI coding agent, Forge, NeoForge, Fabric, Codex">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://moonoo-mw.github.io/Auto-Mod-Minecraft/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Auto-Mod-Minecraft — Minecraft Mod Development Agent Skill">
+  <meta property="og:description" content="An open Agent Skill for AI-assisted Minecraft mod development across Forge, NeoForge, and Fabric.">
+  <meta property="og:url" content="https://moonoo-mw.github.io/Auto-Mod-Minecraft/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Auto-Mod-Minecraft">
+  <meta name="twitter:description" content="A field-tested workflow for AI-assisted Minecraft mod development.">
+  <!-- Add Bing and Baidu verification meta tags here if those webmaster platforms issue them. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "Auto-Mod-Minecraft",
+    "description": "An open Agent Skill for AI-assisted Minecraft mod development across Forge, NeoForge, and Fabric.",
+    "codeRepository": "https://github.com/Moonoo-MW/Auto-Mod-Minecraft",
+    "license": "https://github.com/Moonoo-MW/Auto-Mod-Minecraft/blob/main/LICENSE",
+    "programmingLanguage": "Markdown",
+    "keywords": [
+      "Minecraft mod development",
+      "Agent Skill",
+      "Forge",
+      "NeoForge",
+      "Fabric",
+      "AI coding agent"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101713;
+      --panel: #17241d;
+      --panel-strong: #203229;
+      --text: #edf7ef;
+      --muted: #abc0b1;
+      --accent: #83d18c;
+      --accent-strong: #b4f4b8;
+      --line: #31503d;
+      --code: #0a100c;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(80, 153, 92, .24), transparent 34rem),
+        radial-gradient(circle at 90% 20%, rgba(147, 203, 116, .12), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent-strong); }
+    a:hover { color: #fff; }
+    .wrap { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand { font-weight: 800; letter-spacing: -.02em; text-decoration: none; color: var(--text); }
+    nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    nav a { color: var(--muted); text-decoration: none; font-size: .94rem; }
+
+    main { padding: 5rem 0 3rem; }
+    .hero { max-width: 850px; }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1.1rem;
+      padding: .3rem .7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: .94;
+      letter-spacing: -.065em;
+    }
+
+    .lede {
+      max-width: 760px;
+      margin: 1.7rem 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2.1vw, 1.35rem);
+    }
+
+    .actions { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0 0; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: .7rem 1.1rem;
+      border: 1px solid var(--line);
+      border-radius: .7rem;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--panel);
+      font-weight: 700;
+    }
+
+    .button.primary { background: var(--accent); border-color: var(--accent); color: #0c160f; }
+    .button.primary:hover { background: var(--accent-strong); color: #08100a; }
+
+    section { padding: 4.5rem 0 0; }
+    h2 { margin: 0 0 .7rem; font-size: clamp(1.7rem, 4vw, 2.5rem); letter-spacing: -.035em; }
+    .section-intro { max-width: 760px; margin: 0 0 1.5rem; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .card {
+      min-height: 100%;
+      padding: 1.25rem;
+      border: 1px solid var(--line);
+      border-radius: .9rem;
+      background: linear-gradient(145deg, var(--panel-strong), var(--panel));
+    }
+
+    .card h3 { margin: 0 0 .45rem; font-size: 1.05rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .96rem; }
+
+    pre {
+      overflow-x: auto;
+      margin: 1rem 0 0;
+      padding: 1rem;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      background: var(--code);
+      color: #d9efdd;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .split { display: grid; grid-template-columns: 1.1fr .9fr; gap: 2rem; align-items: start; }
+    .links { display: grid; gap: .7rem; }
+    .links a {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: .85rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: .7rem;
+      background: var(--panel);
+      text-decoration: none;
+    }
+
+    .links span:last-child { color: var(--muted); }
+
+    footer {
+      margin-top: 5rem;
+      padding: 1.4rem 0 2.2rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; }
+      .split { grid-template-columns: 1fr; }
+      main { padding-top: 3rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="./">Auto-Mod-Minecraft</a>
+    <nav aria-label="Main navigation">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#install">Install</a>
+      <a href="#中文">中文</a>
+      <a href="https://github.com/Moonoo-MW/Auto-Mod-Minecraft">GitHub</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <span class="eyebrow">Open Agent Skill</span>
+      <h1>Build Minecraft mods with an agent that reads first.</h1>
+      <p class="lede">Auto-Mod-Minecraft turns natural-language mod requests into repository-consistent changes: project discovery, version-correct APIs, gameplay logic, data, resources, UI, networking, and evidence-based verification.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/Moonoo-MW/Auto-Mod-Minecraft">View on GitHub</a>
+        <a class="button" href="https://github.com/Moonoo-MW/Auto-Mod-Minecraft/blob/main/docs/installation.md">Installation guide</a>
+      </div>
+    </div>
+
+    <section id="capabilities">
+      <h2>One workflow, the whole mod feature</h2>
+      <p class="section-intro">The skill decides what to inspect and what to implement from the actual project. It does not assume that Forge, NeoForge, Fabric, or different Minecraft versions share APIs.</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Discover the real project</h3>
+          <p>Read loader metadata, Gradle configuration, wrapper, Java toolchain, entry points, registration style, client boundaries, and existing resource conventions.</p>
+        </article>
+        <article class="card">
+          <h3>Implement complete chains</h3>
+          <p>Connect registration, runtime behavior, persistence or sync, menus and renderers, localization, models, textures, sounds, recipes, loot, and tags as required.</p>
+        </article>
+        <article class="card">
+          <h3>Verify with honest evidence</h3>
+          <p>Choose targeted checks and builds while keeping compilation, game launch, and observed gameplay behavior clearly distinct.</p>
+        </article>
+        <article class="card">
+          <h3>Respect server authority</h3>
+          <p>Keep client presentation separate from server-owned state and validate network actions before they mutate inventories, players, or the world.</p>
+        </article>
+        <article class="card">
+          <h3>Stay inside scope</h3>
+          <p>Reuse existing systems, preserve uncommitted work, avoid unnecessary upgrades, and keep unrelated refactors out of the change.</p>
+        </article>
+        <article class="card">
+          <h3>Load context on demand</h3>
+          <p>A compact dispatcher routes only the relevant references for discovery, gameplay, resources, UI, and verification.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="install">
+      <div class="split">
+        <div>
+          <h2>Install once, use across mod projects</h2>
+          <p class="section-intro">Install the single <code>minecraft-mod-developer</code> skill folder into your agent's user-level Skills directory. Codex and DeepSeek Harness commonly support <code>~/.agents/skills/</code>; project-level Codex skills commonly use <code>.agents/skills/</code>.</p>
+          <pre>Please install the Minecraft mod development Skill provided by
+https://github.com/Moonoo-MW/Auto-Mod-Minecraft.
+
+Read the README first. Install skills/minecraft-mod-developer into the
+current agent's user-level Skills directory. Do not copy the whole
+repository into my mod project, execute unreviewed scripts, or overwrite
+an existing same-named skill.</pre>
+        </div>
+        <div class="links" aria-label="Project links">
+          <a href="https://github.com/Moonoo-MW/Auto-Mod-Minecraft"><span>Repository</span><span>GitHub →</span></a>
+          <a href="https://github.com/Moonoo-MW/Auto-Mod-Minecraft/blob/main/skills/minecraft-mod-developer/SKILL.md"><span>Main skill</span><span>SKILL.md →</span></a>
+          <a href="https://github.com/Moonoo-MW/Auto-Mod-Minecraft/blob/main/README.zh-CN.md"><span>中文说明</span><span>README →</span></a>
+          <a href="https://github.com/Moonoo-MW/Auto-Mod-Minecraft/blob/main/docs/supported-platforms.md"><span>Supported platforms</span><span>Details →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="中文">
+      <h2>面向 AI 的 Minecraft 模组开发工作流</h2>
+      <p class="section-intro">Auto-Mod-Minecraft 是一个开放 Agent Skill。它要求智能体先识别当前 Minecraft 版本、加载器和工程习惯，再完成代码、资源、数据、界面与网络链路，并按实际执行情况说明验证结果。</p>
+      <div class="grid">
+        <article class="card"><h3>适配现有工程</h3><p>以项目源码和构建配置为准，不把 Forge、NeoForge 或 Fabric 的 API 混为一谈。</p></article>
+        <article class="card"><h3>完整功能交付</h3><p>把注册、运行逻辑、资源、本地化、交互、同步和构建检查作为一个功能处理。</p></article>
+        <article class="card"><h3>节省无关上下文</h3><p>主 Skill 只负责路由，按任务读取必要参考，并缓存稳定的项目事实。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>Auto-Mod-Minecraft · MIT License · Maintained by Moonoo-MW</span>
+  </footer>
+</body>
+</html>

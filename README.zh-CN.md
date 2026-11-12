@@ -2,6 +2,8 @@
 
 一个面向 Minecraft 模组开发的开放 Agent Skill。它让兼容的 AI 智能体通过自然语言完成模组需求，同时坚持先读项目、后选 API，并把代码、资源、数据与必要验证作为一个完整功能来处理。
 
+项目主页：<https://moonoo-mw.github.io/Auto-Mod-Minecraft/>
+
 这不是 Minecraft 教程，也不是一组可以盲目复制的 Java 类。它是一套经过真实模组项目验证、再去项目化后的开发工作流。
 
 ## 解决什么问题

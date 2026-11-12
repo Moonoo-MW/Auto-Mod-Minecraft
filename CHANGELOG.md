@@ -10,3 +10,4 @@ All notable changes to this skill repository are recorded here.
 - Added English and Simplified Chinese project documentation.
 - Added installation guidance for Codex-style and DeepSeek Harness-style user/project skill directories.
 - Added MIT licensing and contribution rules.
+- Added a static project landing page with search descriptions, metadata, `robots.txt`, and `sitemap.xml` for GitHub Pages.
