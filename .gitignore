@@ -1,0 +1,15 @@
+# OS/editor state
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Local temporary files
+*.tmp
+*.log
+
+# Python/tooling caches, if contributors add validation helpers
+__pycache__/
+*.pyc
